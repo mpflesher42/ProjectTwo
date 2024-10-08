@@ -11,7 +11,7 @@ class LinkedList{
     string word;
     int index;
     public:
-        LinkedList getHeadPointer(LinkedList* headPtr){
+        LinkedList getHeadPointer(LinkedList* headPtr){ // The temptation to name it getHead was real.
             return *headPtr;
         }
         LinkedList getTailPointer(LinkedList* tailPtr){
@@ -24,7 +24,7 @@ class LinkedList{
         string insertList(string);
         int removeFromList(string, int);
         friend int sortingFunction(int);
-        LinkedList:friend ostream& operator<< (ostream& const LinkedList&);
+        friend ostream& operator<<(ostream& out  const LinkedList& ll);
 
 };
 #endif
