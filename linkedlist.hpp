@@ -28,10 +28,10 @@ class LinkedList{
         void setLast(LinkedList* lastPtr){
             this->last = lastPtr;
         }
-        string appendList(string);
-        string prependList(string);
-        string insertList(string);
-        int removeFromList(string, int);
+        void appendList(string);
+        void prependList(string);
+        void insertList(string);
+        void removeFromList(string, int);
         friend int sortingFunction(int);
         friend ostream& operator<<(ostream& o, const LinkedList& Ll);
 
