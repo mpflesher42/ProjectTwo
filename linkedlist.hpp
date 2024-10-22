@@ -3,7 +3,7 @@
 #include <string>
 #include <list>
 #include<fstream>
-using std::string;
+using namespace std;
 class LinkedList{
     private:
     LinkedList *head;
@@ -24,7 +24,7 @@ class LinkedList{
         string insertList(string);
         int removeFromList(string, int);
         friend int sortingFunction(int);
-        friend ostream& operator<<(ostream& out  const LinkedList& ll);
+        friend ostream& operator<<(ostream& o, const LinkedList& Ll);
 
 };
 #endif
