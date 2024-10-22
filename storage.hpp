@@ -9,8 +9,7 @@ private:
     {
         ListNode* next;
         ListNode* last;
-        string countyName;
-        int population;
+        typeShit data;
     };
     ListNode* head;
     ListNode* tail;
@@ -21,6 +20,15 @@ public:
         head = NULL;
         tail = NULL;
     }
+    void getHead(); //hehe
+    void getTail(); 
+    void setHead();
+    void setTail();
+    void goForward():
+    void goBack();
+    void setData();
+    void goNext();
+    void goLast();
 };
 
 #endif
