@@ -6,19 +6,28 @@
 using namespace std;
 class LinkedList{
     private:
-    LinkedList *head;
-    LinkedList *tail;
-    string word;
-    int index;
+    struct ListNode
+    {  
+        LinkedList *next;
+        LinkedList *last;
+        string word;
+        int index;
+    };
+    ListNode* head;
+    ListNode* tail;
     public:
-        LinkedList getHeadPointer(LinkedList* headPtr){ // The temptation to name it getHead was real.
-            return *headPtr;
+        LinkedList getNext(LinkedList*){ // The temptation to name it getHead was real.
+            return *next;
         }
-        LinkedList getTailPointer(LinkedList* tailPtr){
-            return *tailPtr;
+        LinkedList getLast(LinkedList*){
+            return *last;
         }
-        void setHeadPointer(LinkedList*);
-        void setTailPointer(LinkedList*);
+        void setNext(LinkedList* nextPtr){
+            this->next = nextPtr;
+        }
+        void setLast(LinkedList* lastPtr){
+            this->last = lastPtr;
+        }
         string appendList(string);
         string prependList(string);
         string insertList(string);
