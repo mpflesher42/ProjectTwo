@@ -4,14 +4,15 @@
 #include <list>
 #include<fstream>
 using namespace std;
+template<typename something>
 class LinkedList{
     private:
     struct ListNode
     {  
         LinkedList *next;
         LinkedList *last;
-        string word;
-        int index;
+        something word;
+        something index;
     };
     ListNode* head;
     ListNode* tail;
