@@ -1,6 +1,6 @@
 #include "linkedlist.hpp"
 template<typename something>
-void LinkedList<something>::appendList(something thingToAppend){
+void LinkedList<something>::appendIntoList(something thingToAppend){
 
     ListNode* nextPtr;
     ListNode* lastPtr;
