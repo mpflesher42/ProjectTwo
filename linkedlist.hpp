@@ -13,6 +13,7 @@ class LinkedList{
         LinkedList *last;
         string countyName;
         int population;
+        int index;
     };
     ListNode* head;
     ListNode* tail;
@@ -34,7 +35,7 @@ class LinkedList{
         void insertList(string);
         void removeFromList(string, int);
         friend int sortingFunction(int);
-        ostream& operator<<(ostream& o, const LinkedList& Ll);
+        friend ostream& operator<<(ostream& o, const LinkedList& Ll);
 
 };
 #endif
