@@ -1,6 +1,6 @@
 #include "linkedlist.hpp"
-        
-void LinkedList::appendList(something thingToAppend){
+template<typename something>
+void LinkedList<something>::appendList(something thingToAppend){
 
     ListNode* nextPtr;
     ListNode* lastPtr;
@@ -16,7 +16,7 @@ void LinkedList::appendList(something thingToAppend){
     }
 
 }
-void LinkedList::prependIntoList(string thingToPrepend){
+void LinkedList<something>::prependIntoList(string thingToPrepend){
     ListNode* nodePtr;
     ListNode* newNode;
     newNode = new nodePtr;
@@ -30,7 +30,7 @@ void LinkedList::prependIntoList(string thingToPrepend){
         newNode->last = head;
     }
 }
-void LinkedList::insertIntoList(string thingToInsert, int position){
+void LinkedList<something>::insertIntoList(string thingToInsert, int position){
     ListNode* nodePtr;
     ListNode* newNode;
 
@@ -69,7 +69,7 @@ void LinkedList::insertIntoList(string thingToInsert, int position){
         nodePtr->last = newNode;
     }
 }
-void LinkedList::removeFromList(string thingToRemove, int position){
+void LinkedList<something>::removeFromList(string thingToRemove, int position){
     ListNode* nodePtr;
     ListNode* lastNode;
     if(!head){
