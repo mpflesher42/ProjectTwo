@@ -103,9 +103,23 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
         }
     }
 }
-int LinkedList::sortingFunction(int array [], int size){
-    //selection sort
-
+int LinkedList::sortingFunction(int *usedArray, int size){//selection sort
+    int minIndex, minValue, temp;
+    for(int start = 0, start < (size-1); start++){
+        if(usedArray[]){
+            minIndex = start;
+            minValue = usedArray[start];
+        }
+        for(int i = start +1; i<size; i++){
+            if(usedArray[i]<min){
+                minValue = usedArray[i];
+                minIndex = i;
+            }
+        temp = usedArray[minIndex];
+        usedArray[minIndex] = usedArray[minValue];
+        usedArray[minValue] = temp;
+        }
+    }
 }
 void LinkedList::swap(int positionOne, int positionTwo){
     ListNode* nodePtrOne;
