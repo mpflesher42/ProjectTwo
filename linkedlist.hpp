@@ -11,8 +11,8 @@ class LinkedList{
     {  
         LinkedList *next;
         LinkedList *last;
-        something word;
-        something index;
+        string countyName;
+        int population;
     };
     ListNode* head;
     ListNode* tail;
