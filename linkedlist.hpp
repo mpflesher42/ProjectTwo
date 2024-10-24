@@ -34,7 +34,7 @@ class LinkedList{
         void insertList(string);
         void removeFromList(string, int);
         friend int sortingFunction(int);
-        friend ostream& operator<<(ostream& o, const LinkedList& Ll);
+        ostream& operator<<(ostream& o, const LinkedList& Ll);
 
 };
 #endif
