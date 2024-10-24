@@ -16,6 +16,7 @@ void LinkedList<something>::appendIntoList(something thingToAppend){
     }
 
 }
+template<typename something>
 void LinkedList<something>::prependIntoList(string thingToPrepend){
     ListNode* nodePtr;
     ListNode* newNode;
@@ -30,6 +31,7 @@ void LinkedList<something>::prependIntoList(string thingToPrepend){
         newNode->last = head;
     }
 }
+template<typename something>
 void LinkedList<something>::insertIntoList(string thingToInsert, int position){
     ListNode* nodePtr;
     ListNode* newNode;
@@ -69,6 +71,7 @@ void LinkedList<something>::insertIntoList(string thingToInsert, int position){
         nodePtr->last = newNode;
     }
 }
+template<typename something>
 void LinkedList<something>::removeFromList(string thingToRemove, int position){
     ListNode* nodePtr;
     ListNode* lastNode;
@@ -103,6 +106,7 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
         }
     }
 }
+template<typename something>
 int LinkedList::sortingFunction(int *usedArray, int size){//selection sort
     int minIndex, minValue, temp;
     for(int start = 0, start < (size-1); start++){
@@ -119,6 +123,7 @@ int LinkedList::sortingFunction(int *usedArray, int size){//selection sort
         }
     }
 }
+template<typename something>
 void LinkedList::swap(int positionOne, int positionTwo){
     ListNode* nodePtrOne;
     ListNode* nodePtrTwo;
