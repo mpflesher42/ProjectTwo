@@ -1,6 +1,6 @@
 #include "linkedlist.hpp"
-        
-void LinkedList::appendList(something thingToAppend){
+template<typename something>
+void LinkedList<something>::appendIntoList(something thingToAppend){
 
     ListNode* nextPtr;
     ListNode* lastPtr;
@@ -16,11 +16,21 @@ void LinkedList::appendList(something thingToAppend){
     }
 
 }
-void LinkedList::prependList(string thingToPrepend){
-
-
+void LinkedList<something>::prependIntoList(string thingToPrepend){
+    ListNode* nodePtr;
+    ListNode* newNode;
+    newNode = new nodePtr;
+    newNode->next = NULL;
+    newNode->last = NULL;
+    if(!tail){
+        tail = newNode;
+        head = newNode;
+    }else{
+        head->next = newNode;
+        newNode->last = head;
+    }
 }
-void LinkedList::insertIntoList(string thingToInsert, int position){
+void LinkedList<something>::insertIntoList(string thingToInsert, int position){
     ListNode* nodePtr;
     ListNode* newNode;
 
@@ -59,10 +69,42 @@ void LinkedList::insertIntoList(string thingToInsert, int position){
         nodePtr->last = newNode;
     }
 }
-void LinkedList::removeFromList(string thingToRemove, int index){
-
+void LinkedList<something>::removeFromList(string thingToRemove, int position){
+    ListNode* nodePtr;
+    ListNode* lastNode;
+    if(!head){
+        return;
+    }
+    if(head->index == position){
+        nodePtr = head->next;
+        delete head;
+        if(nodePtr != NULL){
+            head = nodePtr;
+            head->last = NULL;
+        }else{
+            head = NULL;
+        }
+    }else{
+        nodePtr = head;
+        while(nodePtr && nodePtr->index != position){
+            lastNode = nodePtr;
+            nodePtr = nodePtr->next;
+        }
+        if(nodePtr){
+            if(nodePtr = tail){
+                tail = lastNode;
+            }
+            lastNode->next = nodePtr->next;
+            delete nodePtr;
+            if(lastNode != tail){
+                nodePtr = lastPtr->next;
+                nodePtr->last = lastNode;
+            }
+        }
+    }
 }
-int LinkedList::sortingFunction(int key){
+int LinkedList::sortingFunction(int array [], int size){
+    //selection sort
 
 }
 friend ostream& operator<<(ostream& output, const LinkedList& Ll){

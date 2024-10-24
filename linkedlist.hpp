@@ -3,6 +3,7 @@
 #include <string>
 #include <list>
 #include<fstream>
+#include <iostream>
 using namespace std;
 template<typename something>
 class LinkedList{
@@ -30,9 +31,9 @@ class LinkedList{
         void setLast(LinkedList* lastPtr){
             this->last = lastPtr;
         }
-        void appendList(string);
-        void prependList(string);
-        void insertList(string);
+        void appendIntoList(string);
+        void prependIntoList(string);
+        void insertIntoList(string);
         void removeFromList(string, int);
         friend int sortingFunction(int);
         friend ostream& operator<<(ostream& o, const LinkedList& Ll);
