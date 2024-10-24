@@ -16,9 +16,19 @@ void LinkedList::appendList(something thingToAppend){
     }
 
 }
-void LinkedList::prependList(string thingToPrepend){
-
-
+void LinkedList::prependIntoList(string thingToPrepend){
+    ListNode* nodePtr;
+    ListNode* newNode;
+    newNode = new nodePtr;
+    newNode->next = NULL;
+    newNode->last = NULL;
+    if(!tail){
+        tail = newNode;
+        head = newNode;
+    }else{
+        head->next = newNode;
+        newNode->last = head;
+    }
 }
 void LinkedList::insertIntoList(string thingToInsert, int position){
     ListNode* nodePtr;
@@ -62,7 +72,8 @@ void LinkedList::insertIntoList(string thingToInsert, int position){
 void LinkedList::removeFromList(string thingToRemove, int index){
 
 }
-int LinkedList::sortingFunction(int key){
+int LinkedList::sortingFunction(int array [], int size){
+    //selection sort
 
 }
 friend ostream& operator<<(ostream& output, const LinkedList& Ll){
