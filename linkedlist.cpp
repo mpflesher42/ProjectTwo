@@ -69,8 +69,39 @@ void LinkedList::insertIntoList(string thingToInsert, int position){
         nodePtr->last = newNode;
     }
 }
-void LinkedList::removeFromList(string thingToRemove, int index){
-
+void LinkedList::removeFromList(string thingToRemove, int position){
+    ListNode* nodePtr;
+    ListNode* lastNode;
+    if(!head){
+        return;
+    }
+    if(head->index == position){
+        nodePtr = head->next;
+        delete head;
+        if(nodePtr != NULL){
+            head = nodePtr;
+            head->last = NULL;
+        }else{
+            head = NULL;
+        }
+    }else{
+        nodePtr = head;
+        while(nodePtr && nodePtr->index != position){
+            lastNode = nodePtr;
+            nodePtr = nodePtr->next;
+        }
+        if(nodePtr){
+            if(nodePtr = tail){
+                tail = lastNode;
+            }
+            lastNode->next = nodePtr->next;
+            delete nodePtr;
+            if(lastNode != tail){
+                nodePtr = lastPtr->next;
+                nodePtr->last = lastNode;
+            }
+        }
+    }
 }
 int LinkedList::sortingFunction(int array [], int size){
     //selection sort
