@@ -108,7 +108,24 @@ int LinkedList::sortingFunction(int array [], int size){
 
 }
 void LinkedList::swap(int positionOne, int positionTwo){
-    
+    ListNode* nodePtrOne;
+    ListNode* nodePtrTwo;
+    int tempValue;
+    nodePtrOne = head;
+    int currentPos = 0;
+    while(nodePtrOne != NULL && positionOne != currentPos){
+        nodePtrOne = nodePtrOne->next;
+        currentPos++;
+    }
+    nodePtrTwo = head;
+    currentPos = 0;
+    while(nodePtrTwo != NULL && positionTwo != currentPos){
+        nodePtrTwo = nodePtrTwo->next;
+        currentPos++;
+    }
+    tempValue = nodePtrOne->index;
+    nodePtrOne->index = nodePtrTwo->index;
+    nodePtrTwo->index = tempValue;
 }
 friend ostream& operator<<(ostream& output, const LinkedList& Ll){
     output << "County: "<< LinkedList.countyName << endl << "Population: "<< LinkedList.population << endl;
