@@ -1,28 +1,38 @@
+/*
+    File Name: Driver.cpp
+    Author Name: Mal Flesher
+    Date: 11/1/2024
+    Purpose: 
+*/
+
 #include "storage.hpp"
 #include "linkedlist.hpp"
 #include <iostream>
 using namespace std;
 
-int main(){
+int main() {
 
     //variables
     int choice = 0;
 
+    //beginning of program
+    cout << "\nWelcome to Fantasy County List" << endl;
+
     //user menu
     do {
-        cout << "What would you like to do with your county?" //add in options
+        cout << "What would you like to do with your county?" << endl; //add in options
 
         switch (choice) {
             case 1:
                 //call other case 1 functions and get other needed prompts from user
                 break;
             default:
-                cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t";
+                cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t" << endl;;
                 break;
         }
 
+    //change numeber based on needed menu options
     } while (choice != 6);
-    //change numebr based on needed menu options
 
     return 0;
 }
