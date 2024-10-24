@@ -107,6 +107,9 @@ int LinkedList::sortingFunction(int array [], int size){
     //selection sort
 
 }
+void LinkedList::swap(int positionOne, int positionTwo){
+    
+}
 friend ostream& operator<<(ostream& output, const LinkedList& Ll){
     output << "County: "<< LinkedList.countyName << endl << "Population: "<< LinkedList.population << endl;
     return output;
