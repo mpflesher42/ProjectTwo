@@ -115,9 +115,7 @@ int LinkedList::sortingFunction(int *usedArray, int size){//selection sort
                 minValue = usedArray[i];
                 minIndex = i;
             }
-        temp = usedArray[minIndex];
-        usedArray[minIndex] = usedArray[minValue];
-        usedArray[minValue] = temp;
+        swap(usedArray[minIndex], usedArray[start]);
         }
     }
 }
