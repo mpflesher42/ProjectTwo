@@ -1,17 +1,18 @@
-#ifndef STORAGE_H
-#define STORAGE_H
+#ifndef COUNTY_H
+#define COUNTY_H
 #include <string>
+#include "linkedlist.hpp"
 
-class storage
+class County
 {
 private:
     string countyName;
     int countyPop;
 public:
-    storage(string name, int pop)
+    County county(string name, int pop)
     {
-        countyName = '\0';
-        countyPop = NULL;
+        countyName = name;
+        countyPop = pop;
     }
 
     string getName()
