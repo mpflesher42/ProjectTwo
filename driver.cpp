@@ -18,7 +18,7 @@ int main() {
     //beginning of program
     cout << "\nWelcome to Fantasy County List" << endl;
 
-    //user menu
+    //user menu options
     do {
         cout << "What would you like to do with your county?" << endl; //add in options
 
