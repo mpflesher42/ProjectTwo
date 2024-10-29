@@ -1,3 +1,7 @@
+/*File Name: LinkedList.cpp
+Author Name: David Fields
+Purpose: provides the source code for the LinkedList functiona in LinkedList.hpp
+*/
 #include "linkedlist.hpp"
 template<typename something>
 void appendIntoList(something thingToAppend){
@@ -7,10 +11,10 @@ void appendIntoList(something thingToAppend){
     newNode = new ListNode;
     newNode->next = NULL;
     newNode->last = NULL;
-    if(!head){
+    if(!head){ // if the head pointer is not found
         head = newNode;
         tail = newNode;
-    }else{
+    }else{ // if the head pointer is found
         tail->next = newNode;
         newNode->last = tail;
     }
@@ -23,10 +27,10 @@ void LinkedList<something>::prependIntoList(string thingToPrepend){
     newNode = new nodePtr;
     newNode->next = NULL;
     newNode->last = NULL;
-    if(!tail){
+    if(!tail){ // if the the tail pointer is not found
         tail = newNode;
         head = newNode;
-    }else{
+    }else{ // if the tail pointer is found
         head->next = newNode;
         newNode->last = head;
     }
@@ -36,17 +40,17 @@ void insertIntoList(string thingToInsert, int position){
     ListNode* nodePtr;
     ListNode* newNode;
 
-    newNode = new nodePtr;
-    newNode->index = position;
-    newNode->countyName = thingToInsert;
-    if(!head){
-        if(position = 0){
+    newNode = new nodePtr; // allocates memory for a new node pointer
+    newNode->index = position; //
+    newNode->countyName = thingToInsert; //
+    if(!head){ // if the head pointer is not found
+        if(position = 0){ // in the event that the position has nothing
             cout <<" Placement failed. Please contact your system manager." << endl;
         } 
     }
     head = newNode;
     tail = newNode;
-    else{
+    else{ // if the head pointer is found 
     nodePtr = head;
     int nodeCount = 0;
     if (position == 0){
@@ -145,6 +149,7 @@ void swap(int positionOne, int positionTwo){
     nodePtrOne->index = nodePtrTwo->index;
     nodePtrTwo->index = tempValue;
 }
+template<typename something>
 friend ostream& operator<<(ostream& output, const LinkedList& Ll){
     output << "County: "<< LinkedList.countyName << endl << "Population: "<< LinkedList.population << endl;
     return output;

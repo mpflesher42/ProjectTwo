@@ -32,6 +32,7 @@ int main() {
         }
 
     //change numeber based on needed menu options
+    // LinkedList<typename whatever> variableName;
     } while (choice != 6);
 
     return 0;
