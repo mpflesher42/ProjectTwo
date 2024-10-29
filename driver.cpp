@@ -21,7 +21,7 @@ int main() {
     //user menu options
     do {
         cout << "What would you like to do with your county?" << endl; //add in options
-        //LinkedList<typename> variableName;
+        //LinkedList<typename whatever> variableName;
 
         switch (choice) {
             case 1:
