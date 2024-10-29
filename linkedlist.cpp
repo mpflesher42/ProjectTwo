@@ -8,7 +8,7 @@ void appendIntoList(something thingToAppend){
 
     ListNode* nextPtr;
     ListNode* lastPtr;
-    newNode = new ListNode;
+    newNode = new ListNode; //memory allocation and setting variables
     newNode->next = NULL;
     newNode->last = NULL;
     if(!head){ // if the head pointer is not found
@@ -24,7 +24,7 @@ template<typename something>
 void LinkedList<something>::prependIntoList(string thingToPrepend){
     ListNode* nodePtr;
     ListNode* newNode;
-    newNode = new nodePtr;
+    newNode = new nodePtr; // memory allocation and setting the varaibles
     newNode->next = NULL;
     newNode->last = NULL;
     if(!tail){ // if the the tail pointer is not found
@@ -41,8 +41,8 @@ void insertIntoList(string thingToInsert, int position){
     ListNode* newNode;
 
     newNode = new nodePtr; // allocates memory for a new node pointer
-    newNode->index = position; //
-    newNode->countyName = thingToInsert; //
+    newNode->index = position; // setting the variables
+    newNode->countyName = thingToInsert; 
     if(!head){ // if the head pointer is not found
         if(position = 0){ // in the event that the position has nothing
             cout <<" Placement failed. Please contact your system manager." << endl;
@@ -53,24 +53,24 @@ void insertIntoList(string thingToInsert, int position){
     else{ // if the head pointer is found 
     nodePtr = head;
     int nodeCount = 0;
-    if (position == 0){
+    if (position == 0){// if there is nothing in the node
         newNode->next = head;
         newNode->position = newNode;
         head = newNode;
     }while(nodePtr != tail && nodeCount < position){
         nodeCount++;
-        if(nodeCount==position){
+        if(nodeCount==position){// if the thing to insert is already in
             break;
         }
         nodePtr = nodePtr->next;
     }
-    if(nodePtr->next = NULL){
+    if(nodePtr->next = NULL){ // if there is nothing in nodePtr's next
         tail = newNode;
         newNode->next = nodePtr->next;
         newNode->last = nodePtr;
         nodePtr->next = newNode;
     }
-    if(newNode->next){
+    if(newNode->next){ // if there is something in nodePtr's next
         nodePtr = newNode->next;
         nodePtr->last = newNode;
         }
@@ -80,10 +80,10 @@ template<typename something>
 void LinkedList<something>::removeFromList(string thingToRemove, int position){
     ListNode* nodePtr;
     ListNode* lastNode;
-    if(!head){
+    if(!head){ // if head is not found
         return;
     }
-    if(head->index == position){
+    if(head->index == position){ // if head's index is equal to the position
         nodePtr = head->next;
         delete head;
         if(nodePtr != NULL){
@@ -129,7 +129,7 @@ int sortingFunction(int *usedArray, int size){//selection sort
     }
 }
 template<typename something>
-void swap(int positionOne, int positionTwo){
+void swap(int positionOne, int positionTwo){ // the swap function for the selectionSort code above
     ListNode* nodePtrOne;
     ListNode* nodePtrTwo;
     int tempValue;
