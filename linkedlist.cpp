@@ -46,7 +46,7 @@ void LinkedList<something>::insertIntoList(string thingToInsert, int position){
     }
     head = newNode;
     tail = newNode;
-    }else{
+    else{
     nodePtr = head;
     int nodeCount = 0;
     if (position == 0){
@@ -69,7 +69,7 @@ void LinkedList<something>::insertIntoList(string thingToInsert, int position){
     if(newNode->next){
         nodePtr = newNode->next;
         nodePtr->last = newNode;
-    }
+        }
 }
 template<typename something>
 void LinkedList<something>::removeFromList(string thingToRemove, int position){
@@ -88,23 +88,23 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
             head = NULL;
         }
     }else{
-        nodePtr = head;
-        while(nodePtr && nodePtr->index != position){
-            lastNode = nodePtr;
-            nodePtr = nodePtr->next;
-        }
-        if(nodePtr){
-            if(nodePtr = tail){
-                tail = lastNode;
+            nodePtr = head;
+            while(nodePtr && nodePtr->index != position){
+             lastNode = nodePtr;
+             nodePtr = nodePtr->next;
             }
-            lastNode->next = nodePtr->next;
-            delete nodePtr;
-            if(lastNode != tail){
+            if(nodePtr){
+             if(nodePtr = tail){
+                tail = lastNode;
+             }
+                lastNode->next = nodePtr->next;
+              delete nodePtr;
+                if(lastNode != tail){
                 nodePtr = lastPtr->next;
                 nodePtr->last = lastNode;
+              }
             }
         }
-    }
 }
 template<typename something>
 int LinkedList::sortingFunction(int *usedArray, int size){//selection sort
