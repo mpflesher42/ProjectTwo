@@ -26,10 +26,10 @@ class LinkedList{
     ListNode* tail;
     public:
         LinkedList getNext(LinkedList*){ // The temptation to name it getHead was real.
-            return *next;
+            return next;
         }
         LinkedList getLast(LinkedList*){
-            return *last;
+            return last;
         }
         void setNext(LinkedList* nextPtr){
             this->next = nextPtr;
