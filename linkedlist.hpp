@@ -1,6 +1,7 @@
 /*File Name LinkedList.hpp
 Author: David Fields
-Purpose: Stores the prototypes for LinkedList.cpp*/
+Purpose: Stores the prototypes for LinkedList.cpp
+*/
 
 #ifndef LINKED_LIST_H
 #define LINKED_LINK_H
