@@ -41,7 +41,7 @@ int main() {
         cin.ignore();
         
         template<typename something>
-        LinkedList<something> variableName;
+        LinkedList<something> countyData;
 
         switch (choice) {
             case 1:
