@@ -46,7 +46,7 @@ int main() {
         switch (choice) {
             case 1:
                 //appendIntoList
-                LinkedList<something> apppendIntoList();
+                LinkedList<something> appendIntoList();
                 break;
             case 2:
                 //prependIntoList
