@@ -1,6 +1,6 @@
 /*File Name: LinkedList.cpp
 Author Name: David Fields
-Purpose: provides the source code for the LinkedList functiona in LinkedList.hpp
+Purpose: provides the source code for the LinkedList functions in LinkedList.hpp
 */
 #include "linkedlist.hpp"
 template<typename something>
