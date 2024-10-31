@@ -44,33 +44,28 @@ int main() {
         LinkedList<something> countyData;
 
         switch (choice) {
-            case 1:
-                //appendIntoList
+            case 1: //Add to end of list
                 LinkedList<something> appendIntoList(countyData->getName());
                 break;
-            case 2:
-                //prependIntoList
+            case 2: //Add to front of list
                 LinkedList<something> prependIntoList(countyData->getName());
                 break;
-            case 3:
-                //insertIntoList
+            case 3: //Add to anywhere in list
                 LinkedList<something> insertIntoList(countyData->getName());
                 break;
-            case 4:
-                //removeFromList
+            case 4: //Remove from end of list list
                 LinkedList<something> removeFromList(countyData->getname(),countyData->getPop());
                 break;
-            case 5:
-                //sorting Function
+            case 5: //Sort list
                 LinkedList<something> sortingFunction(countyData->getIndex(),countyData->getPop());
                 break;
-            case 6:
+            case 6: //Save list
                 save();
                 break;
-            case 7:
+            case 7: //Load previous list
                 load();
                 break;
-            default:
+            default: //End Program
                 cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t" << endl;;
                 break;
         }
