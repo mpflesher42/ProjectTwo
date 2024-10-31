@@ -46,7 +46,7 @@ int main() {
         switch (choice) {
             case 1:
                 //appendIntoList
-                LinkedList<something> appendIntoList();
+                LinkedList<something> appendIntoList(countyData->getName());
                 break;
             case 2:
                 //prependIntoList
