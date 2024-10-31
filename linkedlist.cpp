@@ -150,7 +150,7 @@ void swap(int positionOne, int positionTwo){ // the swap function for the select
     nodePtrTwo->index = tempValue;
 }
 template<typename something>
-ostream& operator<<(ostream& output, const LinkedList<typename something>& Ll){ 
+ostream& operator<<(ostream& output, const LinkedList<something>& Ll){ 
     output << "County: "<< LinkedList.countyName << endl << "Population: "<< LinkedList.population << endl;
     return output;
 }
