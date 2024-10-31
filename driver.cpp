@@ -10,6 +10,7 @@
 #include <iostream>
 using namespace std;
 template<typename something>
+
 int main() {
 
     //variables
@@ -40,7 +41,6 @@ int main() {
         }
         cin.ignore();
         
-        template<typename something>
         LinkedList<something> countyData;
 
         switch (choice) {
