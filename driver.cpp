@@ -65,10 +65,10 @@ int main() {
                 LinkedList<something> sortingFunction(countyData->getIndex(),countyData->getPop());
                 break;
             case 6:
-                //save
+                save();
                 break;
             case 7:
-                //load
+                load();
                 break;
             default:
                 cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t" << endl;;
