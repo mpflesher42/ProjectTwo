@@ -26,7 +26,7 @@ int main() {
         cout << "2.\tPrepend to list" << endl;
         cout << "3.\tAdd to list." << endl;
         cout << "4.\tRemove from list" << endl;
-        cout << "5.\tSort list by " << endl;
+        cout << "5.\tSort list" << endl;
         cout << "6.\tSave list" << endl;
         cout << "7.\tLoad previous list" << endl;
         cout << "8.\tEnd Program" << endl;
