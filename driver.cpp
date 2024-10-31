@@ -50,19 +50,19 @@ int main() {
                 break;
             case 2:
                 //prependIntoList
-                LinkedList<something> prependIntoList();
+                LinkedList<something> prependIntoList(countyData->getName());
                 break;
             case 3:
                 //insertIntoList
-                LinkedList<something> insertIntoList();
+                LinkedList<something> insertIntoList(countyData->getName());
                 break;
             case 4:
                 //removeFromList
-                LinkedList<something> removeFromList();
+                LinkedList<something> removeFromList(countyData->getname(),countyData->getPop());
                 break;
             case 5:
                 //sorting Function
-                LinkedList<something> sortingFunction();
+                LinkedList<something> sortingFunction(countyData->getIndex(),countyData->getPop());
                 break;
             case 6:
                 //save
