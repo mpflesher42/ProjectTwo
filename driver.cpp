@@ -9,7 +9,7 @@
 #include "linkedlist.hpp"
 #include <iostream>
 using namespace std;
-
+template<typename something>
 int main() {
 
     //variables
@@ -40,8 +40,8 @@ int main() {
         }
         cin.ignore();
         
-        
-        //LinkedList<typename whatever> variableName;
+        template<typename something>
+        LinkedList<something> variableName;
 
         switch (choice) {
             case 1:
