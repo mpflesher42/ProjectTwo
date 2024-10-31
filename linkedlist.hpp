@@ -43,7 +43,7 @@ class LinkedList{
         void removeFromList(string, int);
         void swapPositions(int, int);
         friend int sortingFunction(int);
-        friend ostream& operator<<(ostream& o, const LinkedList& Ll);
+        friend ostream& operator<<(ostream& o, const LinkedList<something>& Ll);
 
 };
 #endif
