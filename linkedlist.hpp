@@ -6,7 +6,7 @@ Purpose: Stores the prototypes for LinkedList.cpp*/
 #define LINKED_LINK_H
 #include <string>
 #include <list>
-#include<fstream>
+#include <fstream>
 #include <iostream>
 #include "county.hpp"
 using namespace std;
