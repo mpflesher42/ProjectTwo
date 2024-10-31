@@ -8,6 +8,7 @@ Purpose: Stores the prototypes for LinkedList.cpp*/
 #include <list>
 #include<fstream>
 #include <iostream>
+#include "county.hpp"
 using namespace std;
 template<typename something>
 class LinkedList{
