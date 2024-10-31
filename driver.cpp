@@ -77,6 +77,17 @@ int main() {
                 cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t" << endl;;
                 break;
         }
+
+        if (choice !=7 || choice != 8) {
+            cout << "Creating your county" << endl;
+            cout << "\tName of County:\t";
+            countyName = getName();
+            setName(countyName);
+            cout << "\tPopulation of County:\t";
+            countyPop = getPop();
+            setPop();
+        }
+        
     } while (choice != 8);
 
     return 0;
