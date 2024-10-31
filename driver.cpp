@@ -15,9 +15,17 @@ int main() {
 
     //variables
     int choice = 0;
+    string countyName;
 
     //beginning of program
     cout << "\nWelcome to Fantasy County List" << endl;
+    cout << "Lets start with creating your county" << endl;
+    cout << "\tName of County:\t";
+    countyName = getName();
+    setName(countyName);
+    cout << "\tPopulation of County:\t";
+    countyPop = getPop();
+    setPop();
 
     //user menu options
     do {
