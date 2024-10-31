@@ -86,25 +86,25 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
     if(head->index == position){ // if head's index is equal to the position
         nodePtr = head->next;
         delete head;
-        if(nodePtr != NULL){
+        if(nodePtr != NULL){ // if head is not equal to NULL
             head = nodePtr;
             head->last = NULL;
-        }else{
+        }else{// if head is equal to NULL
             head = NULL;
         }
-    }else{
+    }else{// if head is found
             nodePtr = head;
             while(nodePtr && nodePtr->index != position){
              lastNode = nodePtr;
              nodePtr = nodePtr->next;
             }
-            if(nodePtr){
-             if(nodePtr = tail){
+            if(nodePtr){// if nodePtr is found
+             if(nodePtr = tail){// if the nodePtr is the tail
                 tail = lastNode;
              }
                 lastNode->next = nodePtr->next;
               delete nodePtr;
-                if(lastNode != tail){
+                if(lastNode != tail){// if the lastNode(previousNode) is not the tail
                 nodePtr = lastPtr->next;
                 nodePtr->last = lastNode;
               }
