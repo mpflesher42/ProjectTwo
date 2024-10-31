@@ -69,8 +69,6 @@ int main() {
                 cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t" << endl;;
                 break;
         }
-
-    //change numeber based on needed menu options
     } while (choice != 8);
 
     return 0;
