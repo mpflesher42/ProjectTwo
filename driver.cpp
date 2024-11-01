@@ -84,7 +84,7 @@ int main() {
             setName(countyName);
             cout << "\tPopulation of County:\t";
             countyPop = getPop();
-            setPop();
+            setPop(countyPop);
         }
         
     } while (choice != 8);
