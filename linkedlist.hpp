@@ -11,7 +11,7 @@ Purpose: Stores the prototypes for LinkedList.cpp
 #include <iostream>
 #include "county.hpp"
 using namespace std;
-template<typename something>
+template<class something>
 class LinkedList{
     private:
     struct ListNode
