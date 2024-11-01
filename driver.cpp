@@ -15,6 +15,7 @@ int main() {
     //variables
     int choice = 0;
     string countyName;
+    int countyPop;
 
     //beginning of program
     cout << "\nWelcome to Fantasy County List" << endl;
@@ -24,7 +25,7 @@ int main() {
     setName(countyName);
     cout << "\tPopulation of County:\t";
     countyPop = getPop();
-    setPop();
+    setPop(countyPop);
 
     //user menu options
     do {
@@ -84,7 +85,7 @@ int main() {
             setName(countyName);
             cout << "\tPopulation of County:\t";
             countyPop = getPop();
-            setPop();
+            setPop(countyPop);
         }
         
     } while (choice != 8);
