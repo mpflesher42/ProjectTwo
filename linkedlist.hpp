@@ -15,10 +15,16 @@ template<class T>
 
 class LinkedList{
     private:
-    struct ListNode
+    template<class T>
+    class ListNode
     {  
-        LinkedList *head;
-        LinkedList *tail;
+        private:
+        T data;
+        ListNode *head;
+        ListNode *tail;
+        public:
+        
+
     };
 
     ListNode* next;
