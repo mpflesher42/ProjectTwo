@@ -4,14 +4,14 @@ Purpose: Stores the prototypes for LinkedList.cpp
 */
 
 #ifndef LINKEDLIST_HPP
-#define LINKEDLINK_HPP
+#define LINKEDLIST_HPP
 #include <string>
 #include <list>
 #include <fstream>
 #include <iostream>
 #include "county.hpp"
 using namespace std;
-template<class something>
+template<typename something>
 class LinkedList{
     private:
     struct ListNode
@@ -46,4 +46,4 @@ class LinkedList{
         friend ostream& operator<<(ostream& o, const LinkedList<something>& Ll);
 
 };
-#endif
+#endif;
