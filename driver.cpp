@@ -48,7 +48,7 @@ int main() {
             cin >> choice;
         }
         cin.ignore();
-        
+
         LinkedList<something> countyData;
 
         switch (choice) {
