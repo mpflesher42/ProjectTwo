@@ -2,8 +2,10 @@
 Author Name: David Fields
 Purpose: provides the source code for the LinkedList functions in LinkedList.hpp
 */
+
 #include "linkedlist.hpp"
 template<typename something>
+
 void appendIntoList(something thingToAppend){
 
     ListNode* nextPtr;
@@ -20,6 +22,7 @@ void appendIntoList(something thingToAppend){
     }
 
 }
+
 template<typename something>
 void LinkedList<something>::prependIntoList(string thingToPrepend){
     ListNode* nodePtr;
@@ -35,6 +38,7 @@ void LinkedList<something>::prependIntoList(string thingToPrepend){
         newNode->previous = head;
     }
 }
+
 template<typename something>
 void insertIntoList(string thingToInsert, int position){
     ListNode* nodePtr;
@@ -76,6 +80,7 @@ void insertIntoList(string thingToInsert, int position){
         }
     }
 }
+
 template<typename something>
 void LinkedList<something>::removeFromList(string thingToRemove, int position){
     ListNode* nodePtr;
@@ -111,6 +116,7 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
             }
         }
 }
+
 template<typename something>
 int sortingFunction(int *usedArray, int size){//selection sort
     int minIndex, minValue, temp;
@@ -128,6 +134,7 @@ int sortingFunction(int *usedArray, int size){//selection sort
         }
     }
 }
+
 template<typename something>
 void swap(int positionOne, int positionTwo){ // the swap function for the selectionSort code above
     ListNode* nodePtrOne;
@@ -149,6 +156,7 @@ void swap(int positionOne, int positionTwo){ // the swap function for the select
     nodePtrOne->index = nodePtrTwo->index;
     nodePtrTwo->index = tempValue;
 }
+
 template<class something>
 ostream& operator<<(ostream& output, const LinkedList<something>& Ll){ 
     output << "County: "<< Ll.countyName << endl << "Population: "<< Ll.population << endl;
