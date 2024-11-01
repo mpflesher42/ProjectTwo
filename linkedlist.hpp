@@ -11,7 +11,7 @@ Purpose: Stores the prototypes for LinkedList.cpp
 #include <iostream>
 #include "county.hpp"
 using namespace std;
-template<typename something>
+template<typename T>
 
 class LinkedList{
     private:
@@ -47,7 +47,7 @@ class LinkedList{
         void removeFromList(string, int);
         void swapPositions(int, int);
         friend int sortingFunction(int);
-        friend ostream& operator<<(ostream& o, const LinkedList<something>& Ll);
+        friend ostream& operator<<(ostream& o, const LinkedList<T>& Ll);
 };
 
 #endif

@@ -48,23 +48,23 @@ int main() {
         }
         cin.ignore();
 
-        LinkedList<something> countyData;
+        LinkedList<T> countyData;
 
         switch (choice) {
             case 1: //Add to end of list
-                LinkedList<something> appendIntoList(countyData->getName());
+                LinkedList<T> appendIntoList(countyData->getName());
                 break;
             case 2: //Add to front of list
-                LinkedList<something> prependIntoList(countyData->getName());
+                LinkedList<T> prependIntoList(countyData->getName());
                 break;
             case 3: //Add to anywhere in list
-                LinkedList<something> insertIntoList(countyData->getName());
+                LinkedList<T> insertIntoList(countyData->getName());
                 break;
             case 4: //Remove from end of list list
-                LinkedList<something> removeFromList(countyData->getName(),countyData->getPop());
+                LinkedList<T> removeFromList(countyData->getName(),countyData->getPop());
                 break;
             case 5: //Sort list
-                LinkedList<something> sortingFunction(countyData->getIndex(),countyData->getPop());
+                LinkedList<T> sortingFunction(countyData->getIndex(),countyData->getPop());
                 break;
             case 6: //Save list
                 save();

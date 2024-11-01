@@ -4,9 +4,9 @@ Purpose: provides the source code for the LinkedList functions in LinkedList.hpp
 */
 
 #include "linkedlist.hpp"
-template<typename something>
+template<typename T>
 
-void appendIntoList(something thingToAppend){
+void appendIntoList(T thingToAppend){
     ListNode* nextPtr;
     ListNode* lastPtr;
     newNode = new ListNode; //memory allocation and setting variables
@@ -25,8 +25,8 @@ void appendIntoList(something thingToAppend){
 
 }
 
-template<typename something>
-void LinkedList<something>::prependIntoList(string thingToPrepend){
+template<typename T>
+void LinkedList<T>::prependIntoList(string thingToPrepend){
     ListNode* nodePtr;
     ListNode* newNode;
     newNode = new nodePtr; // memory allocation and setting the varaibles
@@ -44,7 +44,7 @@ void LinkedList<something>::prependIntoList(string thingToPrepend){
     }
 }
 
-template<typename something>
+template<typename T>
 void insertIntoList(string thingToInsert, int position){
     ListNode* nodePtr;
     ListNode* newNode;
@@ -87,15 +87,15 @@ void insertIntoList(string thingToInsert, int position){
         nodePtr->next = newNode;
     }
 
-    if(newNode->next){ // if there is something in nodePtr's next
+    if(newNode->next){ // if there is T in nodePtr's next
         nodePtr = newNode->next;
         nodePtr->previous = newNode;
         }
     }
 }
 
-template<typename something>
-void LinkedList<something>::removeFromList(string thingToRemove, int position){
+template<typename T>
+void LinkedList<T>::removeFromList(string thingToRemove, int position){
     ListNode* nodePtr;
     ListNode* lastNode;
 
@@ -143,7 +143,7 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
         }
 }
 
-template<typename something>
+template<typename T>
 int sortingFunction(int *usedArray, int size){//selection sort
     int minIndex, minValue, temp;
 
@@ -167,7 +167,7 @@ int sortingFunction(int *usedArray, int size){//selection sort
     }
 }
 
-template<typename something>
+template<typename T>
 void swap(int positionOne, int positionTwo){ // the swap function for the selectionSort code above
     ListNode* nodePtrOne;
     ListNode* nodePtrTwo;
@@ -193,8 +193,8 @@ void swap(int positionOne, int positionTwo){ // the swap function for the select
     nodePtrTwo->index = tempValue;
 }
 
-template<class something>
-ostream& operator<<(ostream& output, const LinkedList<something>& Ll){ 
+template<typename T>
+ostream& operator<<(ostream& output, const LinkedList<T>& Ll){ 
     output << "County: "<< Ll.countyName << endl << "Population: "<< Ll.population << endl;
     return output;
 }
