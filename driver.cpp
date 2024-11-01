@@ -21,7 +21,7 @@ int main() {
     cout << "\nWelcome to Fantasy County List" << endl;
     cout << "Lets start with creating your county" << endl;
     cout << "\tName of County:\t";
-    countyName = getName();
+    countyName = getName(countyName);
     setName(countyName);
     cout << "\tPopulation of County:\t";
     countyPop = getPop();
@@ -81,7 +81,7 @@ int main() {
         if (choice < 1 || choice > 3) {
             cout << "Creating your county" << endl;
             cout << "\tName of County:\t";
-            countyName = getName();
+            countyName = getName(countyName);
             setName(countyName);
             cout << "\tPopulation of County:\t";
             countyPop = getPop();

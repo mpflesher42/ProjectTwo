@@ -17,7 +17,7 @@ public:
         return newCounty;
     }
 
-    string getName()
+    string getName(string countyName)
     {
         return countyName;
     }
@@ -36,15 +36,25 @@ public:
     {
         countyPop = pop;
     }
-    
+    /*
     void save();
     void load();
+    string getName();
+    void setName(string);
+    int getPop();
+    void setPop(int);
+    void save();
+    void load();
+    */
 };
-string getName();
-void setName(string);
-int getPop();
-void setPop(int);
-void save();
-void load();
 
-#endif;
+void save();
+    void load();
+    string getName(string);
+    void setName(string);
+    int getPop();
+    void setPop(int);
+    void save();
+    void load();
+
+#endif
