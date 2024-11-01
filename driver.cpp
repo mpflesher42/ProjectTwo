@@ -62,7 +62,7 @@ int main() {
                 LinkedList<something> insertIntoList(countyData->getName());
                 break;
             case 4: //Remove from end of list list
-                LinkedList<something> removeFromList(countyData->getname(),countyData->getPop());
+                LinkedList<something> removeFromList(countyData->getName(),countyData->getPop());
                 break;
             case 5: //Sort list
                 LinkedList<something> sortingFunction(countyData->getIndex(),countyData->getPop());
