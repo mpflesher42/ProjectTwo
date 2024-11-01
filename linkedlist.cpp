@@ -9,14 +9,14 @@ void appendIntoList(something thingToAppend){
     ListNode* nextPtr;
     ListNode* lastPtr;
     newNode = new ListNode; //memory allocation and setting variables
-    newNode->forwards = NULL;
-    newNode->backwards = NULL;
+    newNode->next = NULL;
+    newNode->previous = NULL;
     if(!head){ // if the head pointer is not found
         head = newNode;
         tail = newNode;
     }else{ // if the head pointer is found
-        tail->forwards = newNode;
-        newNode->backwards = tail;
+        tail->next = newNode;
+        newNode->previous = tail;
     }
 
 }
@@ -25,14 +25,14 @@ void LinkedList<something>::prependIntoList(string thingToPrepend){
     ListNode* nodePtr;
     ListNode* newNode;
     newNode = new nodePtr; // memory allocation and setting the varaibles
-    newNode->forwards = NULL;
-    newNode->backwards = NULL;
+    newNode->next = NULL;
+    newNode->previous = NULL;
     if(!tail){ // if the the tail pointer is not found
         tail = newNode;
         head = newNode;
     }else{ // if the tail pointer is found
-        head->forwards = newNode;
-        newNode->backwards = head;
+        head->next = newNode;
+        newNode->previous = head;
     }
 }
 template<typename something>
@@ -54,7 +54,7 @@ void insertIntoList(string thingToInsert, int position){
     nodePtr = head;
     int nodeCount = 0;
     if (position == 0){// if there is nothing in the node
-        newNode->forwards = head;
+        newNode->next = head;
         newNode->position = newNode;
         head = newNode;
     }while(nodePtr != tail && nodeCount < position){
@@ -62,17 +62,17 @@ void insertIntoList(string thingToInsert, int position){
         if(nodeCount==position){// if the thing to insert is already in
             break;
         }
-        nodePtr = nodePtr->forwards;
+        nodePtr = nodePtr->next;
     }
-    if(nodePtr->forwards = NULL){ // if there is nothing in nodePtr's forwards
+    if(nodePtr->next = NULL){ // if there is nothing in nodePtr's next
         tail = newNode;
-        newNode->forwards = nodePtr->forwards;
-        newNode->backwards = nodePtr;
-        nodePtr->forwards = newNode;
+        newNode->next = nodePtr->next;
+        newNode->previous = nodePtr;
+        nodePtr->next = newNode;
     }
-    if(newNode->forwards){ // if there is something in nodePtr's forwards
-        nodePtr = newNode->forwards;
-        nodePtr->backwards = newNode;
+    if(newNode->next){ // if there is something in nodePtr's next
+        nodePtr = newNode->next;
+        nodePtr->previous = newNode;
         }
     }
 }
@@ -84,11 +84,11 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
         return;
     }
     if(head->index == position){ // if head's index is equal to the position
-        nodePtr = head->forwards;
+        nodePtr = head->next;
         delete head;
         if(nodePtr != NULL){ // if head is not equal to NULL
             head = nodePtr;
-            head->backwards = NULL;
+            head->previous = NULL;
         }else{// if head is equal to NULL
             head = NULL;
         }
@@ -96,17 +96,17 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
             nodePtr = head;
             while(nodePtr && nodePtr->index != position){
              lastNode = nodePtr;
-             nodePtr = nodePtr->forwards;
+             nodePtr = nodePtr->next;
             }
             if(nodePtr){// if nodePtr is found
              if(nodePtr = tail){// if the nodePtr is the tail
                 tail = lastNode;
              }
-                lastNode->forwards = nodePtr->forwards;
+                lastNode->next = nodePtr->next;
               delete nodePtr;
                 if(lastNode != tail){// if the lastNode(previousNode) is not the tail
-                nodePtr = lastPtr->forwards;
-                nodePtr->backwards = lastNode;
+                nodePtr = lastPtr->next;
+                nodePtr->previous = lastNode;
               }
             }
         }
@@ -136,13 +136,13 @@ void swap(int positionOne, int positionTwo){ // the swap function for the select
     nodePtrOne = head;
     int currentPos = 0;
     while(nodePtrOne != NULL && positionOne != currentPos){
-        nodePtrOne = nodePtrOne->forwards;
+        nodePtrOne = nodePtrOne->next;
         currentPos++;
     }
     nodePtrTwo = head;
     currentPos = 0;
     while(nodePtrTwo != NULL && positionTwo != currentPos){
-        nodePtrTwo = nodePtrTwo->forwards;
+        nodePtrTwo = nodePtrTwo->next;
         currentPos++;
     }
     tempValue = nodePtrOne->index;
