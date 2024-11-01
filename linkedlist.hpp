@@ -23,17 +23,10 @@ class LinkedList{
         ListNode *head;
         ListNode *tail;
         public:
-
-
-    };
-    ListNode* next;
-    ListNode* previous;
-
-    public:
-        LinkedList::ListNode getNext(ListNode*){ // The temptation to name it getHead was real.
+        ListNode getNext(ListNode*){ // The temptation to name it getHead was real.
             return next;
         }
-        LinkedList::ListNode getPrevious(ListNode*){
+                LinkedList::ListNode getPrevious(ListNode*){
             return previous;
         }
        LinkedList::ListNode void setNext(LinkedList* nextPtr){
@@ -42,7 +35,11 @@ class LinkedList{
         LinkedList::ListNode void setPrevious(LinkedList* lastPtr){
             this->previous= lastPtr;
         }
+    };
+    ListNode* next;
+    ListNode* previous;
 
+    public:
         void appendIntoList(string);
         void prependIntoList(string);
         void insertIntoList(string);
