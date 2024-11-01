@@ -11,8 +11,10 @@ private:
 public:
     County county(string name, int pop)
     {
-        countyName = name;
-        countyPop = pop;
+        County newCounty;
+        newCounty.countyName = name;
+        newCounty.countyPop = pop;
+        return newCounty;
     }
 
     string getName()
