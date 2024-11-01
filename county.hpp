@@ -38,5 +38,9 @@ public:
     void save();
     void load();
 };
+string getName();
+void setName(string);
+int getPop();
+void setPop(int);
 
 #endif
