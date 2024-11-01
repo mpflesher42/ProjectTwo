@@ -11,8 +11,6 @@ void save(string fileName, County countyInfo)
 {
     // TO DO: Implement save to "counties.txt" function
     fstream outFile;
-
-
 }
 
 void load(string fileName, County countyInfo)
@@ -24,6 +22,7 @@ void load(string fileName, County countyInfo)
     County newCounty;
 
     inFile.open(fileName);
+
     while (inFile.good());
     {
         getline(inFile, countyName, '#');

@@ -48,5 +48,4 @@ void setName(string);
 int getPop();
 void setPop(int);
 
-
 #endif
