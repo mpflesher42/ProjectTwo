@@ -78,7 +78,7 @@ int main() {
                 break;
         }
 
-        if (choice !=7 || choice != 8) {
+        if (choice < 1 || choice > 3) {
             cout << "Creating your county" << endl;
             cout << "\tName of County:\t";
             countyName = getName();
