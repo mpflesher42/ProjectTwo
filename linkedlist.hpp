@@ -37,7 +37,7 @@ class LinkedList{
         void setNext(LinkedList* nextPtr){
             this->next = nextPtr;
         }
-        void setLast(LinkedList* lastPtr){
+        void setPrevious(LinkedList* lastPtr){
             this->previous= lastPtr;
         }
 
