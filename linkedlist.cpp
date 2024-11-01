@@ -10,13 +10,13 @@ void appendIntoList(something thingToAppend){
     ListNode* lastPtr;
     newNode = new ListNode; //memory allocation and setting variables
     newNode->next = NULL;
-    newNode->last = NULL;
+    newNode->previous = NULL;
     if(!head){ // if the head pointer is not found
         head = newNode;
         tail = newNode;
     }else{ // if the head pointer is found
         tail->next = newNode;
-        newNode->last = tail;
+        newNode->previous = tail;
     }
 
 }
@@ -26,13 +26,13 @@ void LinkedList<something>::prependIntoList(string thingToPrepend){
     ListNode* newNode;
     newNode = new nodePtr; // memory allocation and setting the varaibles
     newNode->next = NULL;
-    newNode->last = NULL;
+    newNode->previous = NULL;
     if(!tail){ // if the the tail pointer is not found
         tail = newNode;
         head = newNode;
     }else{ // if the tail pointer is found
         head->next = newNode;
-        newNode->last = head;
+        newNode->previous = head;
     }
 }
 template<typename something>
@@ -67,12 +67,12 @@ void insertIntoList(string thingToInsert, int position){
     if(nodePtr->next = NULL){ // if there is nothing in nodePtr's next
         tail = newNode;
         newNode->next = nodePtr->next;
-        newNode->last = nodePtr;
+        newNode->previous = nodePtr;
         nodePtr->next = newNode;
     }
     if(newNode->next){ // if there is something in nodePtr's next
         nodePtr = newNode->next;
-        nodePtr->last = newNode;
+        nodePtr->previous = newNode;
         }
     }
 }
@@ -88,7 +88,7 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
         delete head;
         if(nodePtr != NULL){ // if head is not equal to NULL
             head = nodePtr;
-            head->last = NULL;
+            head->previous = NULL;
         }else{// if head is equal to NULL
             head = NULL;
         }
@@ -106,7 +106,7 @@ void LinkedList<something>::removeFromList(string thingToRemove, int position){
               delete nodePtr;
                 if(lastNode != tail){// if the lastNode(previousNode) is not the tail
                 nodePtr = lastPtr->next;
-                nodePtr->last = lastNode;
+                nodePtr->previous = lastNode;
               }
             }
         }
