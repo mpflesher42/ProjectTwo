@@ -48,11 +48,11 @@ int main() {
         }
         cin.ignore();
 
-        LinkedList<T> countyData;
+        LinkedList<County> countyData;
 
         switch (choice) {
             case 1: //Add to end of list
-                LinkedList<T> appendIntoList(countyData->getName());
+                appendIntoList<County>(countyData->getName());
                 break;
             case 2: //Add to front of list
                 LinkedList<T> prependIntoList(countyData->getName());

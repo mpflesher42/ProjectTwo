@@ -11,7 +11,7 @@ Purpose: Stores the prototypes for LinkedList.cpp
 #include <iostream>
 #include "county.hpp"
 using namespace std;
-template<typename T>
+template<class T>
 
 class LinkedList{
     private:
@@ -19,9 +19,6 @@ class LinkedList{
     {  
         LinkedList *head;
         LinkedList *tail;
-        string countyName;
-        int population;
-        int index;
     };
 
     ListNode* next;
