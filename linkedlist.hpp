@@ -16,8 +16,8 @@ class LinkedList{
     private:
     struct ListNode
     {  
-        LinkedList *next;
-        LinkedList *previous;
+        LinkedList *forwards;
+        LinkedList *backwards
         string countyName;
         int population;
         int index;
@@ -26,10 +26,10 @@ class LinkedList{
     ListNode* tail;
     public:
         LinkedList getNext(LinkedList*){ // The temptation to name it getHead was real.
-            return next;
+            return forwards;
         }
         LinkedList getPrevious(LinkedList*){
-            return previous;
+            return backwards;
         }
         void setNext(LinkedList* nextPtr){
             this->next = nextPtr;
