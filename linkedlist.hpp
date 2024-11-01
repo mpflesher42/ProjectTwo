@@ -23,24 +23,23 @@ class LinkedList{
         ListNode *head;
         ListNode *tail;
         public:
-        
+
 
     };
-
     ListNode* next;
     ListNode* previous;
 
     public:
-        LinkedList getNext(ListNode*){ // The temptation to name it getHead was real.
+        LinkedList::ListNode getNext(ListNode*){ // The temptation to name it getHead was real.
             return next;
         }
-        LinkedList getPrevious(ListNode*){
+        LinkedList::ListNode getPrevious(ListNode*){
             return previous;
         }
-        void setNext(LinkedList* nextPtr){
+       LinkedList::ListNode void setNext(LinkedList* nextPtr){
             this->next = nextPtr;
         }
-        void setPrevious(LinkedList* lastPtr){
+        LinkedList::ListNode void setPrevious(LinkedList* lastPtr){
             this->previous= lastPtr;
         }
 
