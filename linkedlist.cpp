@@ -149,7 +149,7 @@ void swap(int positionOne, int positionTwo){ // the swap function for the select
     nodePtrOne->index = nodePtrTwo->index;
     nodePtrTwo->index = tempValue;
 }
-template<typename something>
+template<class something>
 ostream& operator<<(ostream& output, const LinkedList<something>& Ll){ 
     output << "County: "<< LinkedList.countyName << endl << "Population: "<< LinkedList.population << endl;
     return output;
