@@ -42,5 +42,7 @@ string getName();
 void setName(string);
 int getPop();
 void setPop(int);
+void save();
+void load();
 
 #endif
