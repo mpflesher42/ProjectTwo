@@ -8,7 +8,6 @@
 #include "county.hpp"
 #include "linkedlist.hpp"
 using namespace std;
-template<class something>
 
 int main() {
 
