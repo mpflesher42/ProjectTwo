@@ -47,6 +47,7 @@ class LinkedList{
         void removeFromList(string, int);
         void swapPositions(int, int);
         friend int sortingFunction(int);
+        template<typename something>
         friend ostream& operator<<(ostream& o, const LinkedList<something>& Ll);
 };
 
