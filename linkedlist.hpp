@@ -46,4 +46,4 @@ class LinkedList{
         friend ostream& operator<<(ostream& o, const LinkedList<something>& Ll);
 
 };
-#endif;
+#endif
