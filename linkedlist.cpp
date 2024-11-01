@@ -151,6 +151,6 @@ void swap(int positionOne, int positionTwo){ // the swap function for the select
 }
 template<class something>
 ostream& operator<<(ostream& output, const LinkedList<something>& Ll){ 
-    output << "County: "<< LinkedList.countyName << endl << "Population: "<< LinkedList.population << endl;
+    output << "County: "<< Ll.countyName << endl << "Population: "<< Ll.population << endl;
     return output;
 }
