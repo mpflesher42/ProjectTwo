@@ -3,8 +3,8 @@ Author: David Fields
 Purpose: Stores the prototypes for LinkedList.cpp
 */
 
-#ifndef LINKED_LIST_H
-#define LINKED_LINK_H
+#ifndef LINKEDLIST_H
+#define LINKEDLINK_H
 #include <string>
 #include <list>
 #include <fstream>
