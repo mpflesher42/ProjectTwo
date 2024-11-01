@@ -12,6 +12,7 @@ Purpose: Stores the prototypes for LinkedList.cpp
 #include "county.hpp"
 using namespace std;
 template<typename something>
+
 class LinkedList{
     private:
     struct ListNode
@@ -22,8 +23,10 @@ class LinkedList{
         int population;
         int index;
     };
+
     ListNode* next;
     ListNode* previous;
+
     public:
         LinkedList getNext(ListNode*){ // The temptation to name it getHead was real.
             return next;
@@ -37,6 +40,7 @@ class LinkedList{
         void setLast(LinkedList* lastPtr){
             this->previous= lastPtr;
         }
+
         void appendIntoList(string);
         void prependIntoList(string);
         void insertIntoList(string);
@@ -44,6 +48,6 @@ class LinkedList{
         void swapPositions(int, int);
         friend int sortingFunction(int);
         friend ostream& operator<<(ostream& o, const LinkedList<something>& Ll);
-
 };
+
 #endif

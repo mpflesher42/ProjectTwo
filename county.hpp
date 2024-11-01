@@ -36,25 +36,17 @@ public:
     {
         countyPop = pop;
     }
-    /*
+
     void save();
     void load();
-    string getName();
-    void setName(string);
-    int getPop();
-    void setPop(int);
-    void save();
-    void load();
-    */
 };
 
 void save();
-    void load();
-    string getName(string);
-    void setName(string);
-    int getPop();
-    void setPop(int);
-    void save();
-    void load();
+void load();
+string getName(string);
+void setName(string);
+int getPop();
+void setPop(int);
+
 
 #endif

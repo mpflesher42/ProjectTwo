@@ -87,7 +87,7 @@ int main() {
             countyPop = getPop();
             setPop(countyPop);
         }
-        
+
     } while (choice != 8);
 
     return 0;
