@@ -1,5 +1,5 @@
-#ifndef COUNTY_H
-#define COUNTY_H
+#ifndef COUNTY_HPP
+#define COUNTY_HPP
 #include <string>
 #include "linkedlist.hpp"
 
