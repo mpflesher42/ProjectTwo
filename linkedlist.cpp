@@ -5,8 +5,8 @@ Purpose: provides the source code for the LinkedList functions in LinkedList.hpp
 
 #include "linkedlist.hpp"
 using namespace std;
-template<typename T>
 
+template<typename T>
 void appendIntoList(T data){
     ListNode* nextPtr;
     ListNode* lastPtr;
