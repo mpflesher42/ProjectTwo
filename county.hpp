@@ -1,6 +1,7 @@
 #ifndef COUNTY_HPP
 #define COUNTY_HPP
 #include <string>
+#include <iostream>
 #include "linkedlist.hpp"
 
 class County
