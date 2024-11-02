@@ -14,17 +14,20 @@ int main() {
     //variables
     int choice = 0;
     string countyName;
-    int countyPop;
+    int countyPop, index=0;
+    County county;
+
+    LinkedList<County> countyData;
 
     //beginning of program
     cout << "\nWelcome to Fantasy County List" << endl;
     cout << "Lets start with creating your county" << endl;
     cout << "\tName of County:\t";
-    countyName = getName(countyName);
-    setName(countyName);
+    countyName = county.getName(countyName);
+    county.setName(countyName);
     cout << "\tPopulation of County:\t";
-    countyPop = getPop();
-    setPop(countyPop);
+    countyPop = county.getPop();
+    county.setPop(countyPop);
 
     //user menu options
     do {
@@ -32,7 +35,7 @@ int main() {
         cout << "1.\tAdd to end of list" << endl;
         cout << "2.\tAdd to front of list" << endl;
         cout << "3.\tAdd to anywhere in list" << endl;
-        cout << "4.\tRemove from end of list list" << endl;
+        cout << "4.\tRemove from anywhere in list" << endl;
         cout << "5.\tSort list" << endl;
         cout << "6.\tSave list" << endl;
         cout << "7.\tLoad previous list" << endl;
@@ -48,23 +51,32 @@ int main() {
         }
         cin.ignore();
 
-        LinkedList<County> countyData;
-
         switch (choice) {
             case 1: //Add to end of list
-                appendIntoList<County>(countyData->getName());
+                //appendIntoList<County>(countyData->getName());
+                countyData.appendIntoList(County(countyName, countyPop));
                 break;
             case 2: //Add to front of list
-                LinkedList<T> prependIntoList(countyData->getName());
+                //LinkedList<T> prependIntoList(countyData->getName());
+                countyData.prependIntoList(County(countyName, countyPop));
                 break;
             case 3: //Add to anywhere in list
-                LinkedList<T> insertIntoList(countyData->getName());
+                //LinkedList<T> insertIntoList(countyData->getName());
+                cout << "\tEnter the index:\t";
+                cin >> index;
+                cin.ignore();
+                countyData.insertIntoList(County(countyName, countyPop), index);
                 break;
-            case 4: //Remove from end of list list
-                LinkedList<T> removeFromList(countyData->getName(),countyData->getPop());
+            case 4: //Remove from anywhere in list
+                //LinkedList<T> removeFromList(countyData->getName(),countyData->getPop());
+                cout << "\tEnter the index:\t";
+                cin >> index;
+                cin.ignore();
+                countyData.removeFromList(countyName, index);
                 break;
             case 5: //Sort list
-                LinkedList<T> sortingFunction(countyData->getIndex(),countyData->getPop());
+                //LinkedList<T> sortingFunction(countyData->getIndex(),countyData->getPop());
+                countyData.sortingFunction();
                 break;
             case 6: //Save list
                 save();
@@ -80,11 +92,11 @@ int main() {
         if (choice < 1 || choice > 3) {
             cout << "Creating your county" << endl;
             cout << "\tName of County:\t";
-            countyName = getName(countyName);
-            setName(countyName);
+            countyName = county.getName(countyName);
+            county.setName(countyName);
             cout << "\tPopulation of County:\t";
-            countyPop = getPop();
-            setPop(countyPop);
+            countyPop = county.getPop();
+            county.setPop(countyPop);
         }
 
     } while (choice != 8);

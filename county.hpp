@@ -17,6 +17,10 @@ public:
         return newCounty;
     }
 
+    //Constructor
+    County(string name, int pop) : countyName(name), countyPop(pop) {}
+    County() : countyName(""), countyPop(0) {}
+
     string getName(string countyName)
     {
         return countyName;
@@ -37,15 +41,8 @@ public:
         countyPop = pop;
     }
 
-    void save();
-    void load();
+    void save(const string& fileName);
+    void load(const string& fileName);
 };
-
-void save();
-void load();
-string getName(string);
-void setName(string);
-int getPop();
-void setPop(int);
 
 #endif

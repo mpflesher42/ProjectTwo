@@ -6,7 +6,7 @@ Purpose: provides the source code for the LinkedList functions in LinkedList.hpp
 #include "linkedlist.hpp"
 template<typename T>
 
-void appendIntoList(T thingToAppend){
+void appendIntoList(T data){
     ListNode* nextPtr;
     ListNode* lastPtr;
     newNode = new ListNode; //memory allocation and setting variables
@@ -21,12 +21,13 @@ void appendIntoList(T thingToAppend){
     else{ // if the head pointer is found
         tail->next = newNode;
         newNode->previous = tail;
+        tail = newNode;
     }
 
 }
 
 template<typename T>
-void LinkedList<T>::prependIntoList(string thingToPrepend){
+void LinkedList<T>::prependIntoList(T data){
     ListNode* nodePtr;
     ListNode* newNode;
     newNode = new nodePtr; // memory allocation and setting the varaibles
@@ -45,7 +46,7 @@ void LinkedList<T>::prependIntoList(string thingToPrepend){
 }
 
 template<typename T>
-void insertIntoList(string thingToInsert, int position){
+void insertIntoList(T data, int poistion){
     ListNode* nodePtr;
     ListNode* newNode;
 

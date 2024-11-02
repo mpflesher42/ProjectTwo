@@ -15,37 +15,41 @@ template<class T>
 
 class LinkedList{
     private:
-    template<class T>
-    class ListNode
-    {  
-        private:
-        T data;
-        ListNode *head;
-        ListNode *tail;
-        public:
-        ListNode getNext(ListNode*){ // The temptation to name it getHead was real.
-            return next;
-        }
-                LinkedList::ListNode getPrevious(ListNode*){
-            return previous;
-        }
-       LinkedList::ListNode void setNext(LinkedList* nextPtr){
-            this->next = nextPtr;
-        }
-        LinkedList::ListNode void setPrevious(LinkedList* lastPtr){
-            this->previous= lastPtr;
-        }
-    };
-    ListNode* next;
-    ListNode* previous;
+        class ListNode
+        {  
+            private:
+                T data;
+                ListNode* next;
+                ListNode* previous;
+                ListNode (T value) : data(value), next(nullptr), previous(nullptr) {}
+            public:
+            ListNode getNext(ListNode*){ // The temptation to name it getHead was real.
+                return next;
+            }
+                    LinkedList::ListNode getPrevious(ListNode*){
+                return previous;
+            }
+            void setNext(ListNode* nextPtr){
+                this->next = nextPtr;
+            }
+            void setPrevious(ListNode* lastPtr){
+                this->previous= lastPtr;
+            }
+        };
+
+        ListNode* head;
+        ListNode* tail;
 
     public:
-        void appendIntoList(string);
-        void prependIntoList(string);
-        void insertIntoList(string);
+    LinkedList() : head(nullptr), tail(nullptr) {}
+
+        void appendIntoList(T);
+        void prependIntoList(T);
+        void insertIntoList(T, int);
         void removeFromList(string, int);
         void swapPositions(int, int);
-        friend int sortingFunction(int);
+        int sortingFunction();
+
         friend ostream& operator<<(ostream& o, const LinkedList<T>& Ll);
 };
 

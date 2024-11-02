@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <fstream>
 #include "county.hpp"
@@ -7,7 +5,7 @@
 using namespace std;
 
 // Move save/load functions to main
-void save(string fileName, County countyInfo)
+void save(string& fileName, County countyInfo)
 {
     // TO DO: Implement save to "counties.txt" function
     fstream outFile;
