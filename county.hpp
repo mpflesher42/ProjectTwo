@@ -42,8 +42,8 @@ public:
         countyPop = pop;
     }
 
-    void save(const string& fileName);
-    void load(const string& fileName);
+    //void save(const string& fileName);
+    //void load(const string& fileName);
 };
 
 #endif

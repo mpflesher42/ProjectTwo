@@ -4,14 +4,16 @@
 
 using namespace std;
 
+
 // Move save/load functions to main
-void save(string& fileName, County countyInfo)
+/*
+void save(string& fileName)
 {
     // TO DO: Implement save to "counties.txt" function
     fstream outFile;
 }
 
-void load(string fileName, County countyInfo)
+void load(string fileName)
 {
     // TO DO: Implement load from "counties.txt" function
     fstream inFile;
@@ -26,6 +28,5 @@ void load(string fileName, County countyInfo)
         getline(inFile, countyName, '#');
         getline(inFile, countyPop, '#');
     }
-
-    LinkedList<County>;
-}
+} 
+*/

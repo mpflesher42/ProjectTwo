@@ -16,7 +16,6 @@ int main() {
     string countyName;
     int countyPop, index=0;
     County county;
-    string fileName = "counties.txt";
 
     LinkedList<County> countyData;
 
@@ -80,10 +79,10 @@ int main() {
                 countyData.sortingFunction();
                 break;
             case 6: //Save list
-                //save(fileName, countyData);
+                //save(countyData, "counties.txt");
                 break;
             case 7: //Load previous list
-                //load(fileName, countyData);
+                //load(countyData, "counties.txt");
                 break;
             default: //End Program
                 cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t" << endl;;
