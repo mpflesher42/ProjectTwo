@@ -50,7 +50,8 @@ class LinkedList{
         void swapPositions(int, int);
         int sortingFunction();
 
-        friend ostream& operator<<(ostream& o, const LinkedList<T>& Ll);
+    template<typename U>
+        friend ostream& operator<<(ostream& o, const LinkedList<U>& Ll);
 };
 
 #endif
