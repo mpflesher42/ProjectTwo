@@ -80,10 +80,10 @@ int main() {
                 countyData.sortingFunction();
                 break;
             case 6: //Save list
-                save(fileName, countyData);
+                //save(fileName, countyData);
                 break;
             case 7: //Load previous list
-                load(fileName, countyData);
+                //load(fileName, countyData);
                 break;
             default: //End Program
                 cout << "\nThat was not a valid choice. Please choose a number between 1-6:\t" << endl;;
