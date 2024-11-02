@@ -149,7 +149,7 @@ template<typename T>
 int sortingFunction(int *usedArray, int size){//selection sort
     int minIndex, minValue, temp;
 
-    for(int start = 0, start < (size-1); start++){
+    for(int start = 0; start < (size-1); start++){
 
         if(usedArray[]){
             minIndex = start;
